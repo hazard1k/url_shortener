@@ -12,10 +12,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       
-      - name: Setup go
-        uses: action/setup-go@v2
-        with:
-         go-version: 1.16
+      - uses: variantdev/setup-go-actions@v1
+      - run: actions -help
          
       - name: Test
         run: go test ./...
